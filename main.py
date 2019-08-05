@@ -1,7 +1,7 @@
 import time
 from basic_eratosthenes import Eratosthenes
 
-n = 10 ** 5
+n = 10 ** 7
 
 def timedExecution(func):
     start_time = time.time()
