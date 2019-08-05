@@ -72,6 +72,20 @@ class DoublyLinkedList:
         next_node.prev = new_node
 
     '''
+    delete given node
+    '''
+    def delete_node(self, target_node):
+        if target_node is None:
+            print("Error: given target_node is None")
+            return
+        if target_node.prev is None:
+            self.head = target_node.next
+        else:
+            target_node.prev.next = target_node.next
+        if target_node.next is not None:
+            target_node.next.prev = target_node.prev
+
+    '''
     return the list in the form of an array
     '''
     def to_array(self):
