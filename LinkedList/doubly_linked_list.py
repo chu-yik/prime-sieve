@@ -5,6 +5,10 @@ class DoublyLinkedList:
     def __init__(self):
         self.head = None
 
+    '''
+    tail is computed on the fly instead of stored
+    '''
+    @property
     def tail(self):
         last = self.head
         if last is None:

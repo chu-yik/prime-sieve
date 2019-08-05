@@ -3,22 +3,22 @@
 import unittest
 from LinkedList.doubly_linked_list import DoublyLinkedList
 
-class TestDLL(unittest.TestCase):
+class TestDoublyLinkedList(unittest.TestCase):
     def test_tail_if_list_empty(self):
         list = DoublyLinkedList()
-        self.assertIsNone(list.tail())
+        self.assertIsNone(list.tail, 'tail should return None for empty DLL')
 
     def test_tail_same_as_head_if_one_node(self):
         list = DoublyLinkedList()
         list.push("A")
-        self.assertEqual(list.head, list.tail())
+        self.assertEqual(list.head, list.tail, 'tail should be the same as head for DLL with one Node')
 
     def test_tail_gives_last(self):
         list = DoublyLinkedList()
         list.append("A")
         list.append("B")
         list.append("C")
-        self.assertEqual("C", list.tail().data)
+        self.assertEqual("C", list.tail.data)
     
     def test_push_empty(self):
         list = DoublyLinkedList()
@@ -40,7 +40,7 @@ class TestDLL(unittest.TestCase):
         list = DoublyLinkedList()
         list.push("A")
         list.append("T")
-        self.assertEqual("T", list.tail().data)
+        self.assertEqual("T", list.tail.data)
 
     def test_insert_after(self):
         list = DoublyLinkedList()
