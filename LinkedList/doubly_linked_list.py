@@ -70,3 +70,14 @@ class DoublyLinkedList:
         if new_node.prev is not None: # if new_node.prev (next_node.prev) is None it means we are at the beginning of the list
             new_node.prev.next = new_node
         next_node.prev = new_node
+
+    '''
+    return the list in the form of an array
+    '''
+    def to_array(self):
+        result = []
+        last = self.head
+        while (last is not None):
+            result.append(last.data)
+            last = last.next
+        return result
