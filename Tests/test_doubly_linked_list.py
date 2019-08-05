@@ -48,4 +48,12 @@ class TestDoublyLinkedList(unittest.TestCase):
         list.append("B")
         list.append("C")
         list.insert_after(list.head, "T")
-        self.assertEqual("T", list.head.next.data, 'error inserting after a Node in DLL')
+        self.assertEqual("T", list.tail.prev.prev.data, 'error inserting after a Node in DLL')
+
+    def test_insert_before(self):
+        list = DoublyLinkedList()
+        list.append("A")
+        list.append("B")
+        list.append("C")
+        list.insert_before(list.tail, "T")
+        self.assertEqual("T", list.head.next.next.data, 'error inserting before a Node in DLL')
