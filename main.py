@@ -2,7 +2,7 @@ import time
 from basic_eratosthenes import Eratosthenes
 from basic_gries_misra import GriesMisra
 
-n = 10 ** 3
+n = 10 ** 6
 
 def timedExecution(func):
     start_time = time.time()
